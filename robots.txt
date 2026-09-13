@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://timestablestar.primituz.com/sitemap.xml

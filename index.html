@@ -7,17 +7,17 @@
 <meta name="description" content="Times Table Star is a maths practice game for iPhone and iPad. Your child raises a pet that only grows when they practise times tables, division and missing numbers. No adverts, no accounts, no tracking.">
 <meta name="apple-itunes-app" content="app-id=6762815924">
 <meta name="theme-color" content="#fff8f0">
-<link rel="canonical" href="https://angweeseng.github.io/timestablestar-support/">
+<link rel="canonical" href="https://timestablestar.primituz.com/">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Times Table Star">
 <meta property="og:locale" content="en_GB">
-<meta property="og:url" content="https://angweeseng.github.io/timestablestar-support/">
+<meta property="og:url" content="https://timestablestar.primituz.com/">
 <meta property="og:title" content="Times Table Star: maths practice with a pet that grows">
 <meta property="og:description" content="A pet that only grows when your child practises. Free to download for iPhone and iPad, with no adverts, no accounts and no tracking.">
-<meta property="og:image" content="https://angweeseng.github.io/timestablestar-support/img/og-image.jpg">
+<meta property="og:image" content="https://timestablestar.primituz.com/img/og-image.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -25,11 +25,27 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Times Table Star: maths practice with a pet that grows">
 <meta name="twitter:description" content="A pet that only grows when your child practises. Free to download for iPhone and iPad, with no adverts, no accounts and no tracking.">
-<meta name="twitter:image" content="https://angweeseng.github.io/timestablestar-support/img/og-image.jpg">
+<meta name="twitter:image" content="https://timestablestar.primituz.com/img/og-image.jpg">
 <meta name="twitter:image:alt" content="Stella the star, Mochi the kitten and Ember the dragon from Times Table Star">
 
 <link rel="preload" href="fonts/fredokaone-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="site.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Times Table Star",
+  "description": "A maths practice game for iPhone and iPad, where a pet only grows when a child practises times tables, division and missing numbers.",
+  "operatingSystem": "iOS",
+  "applicationCategory": "EducationalApplication",
+  "url": "https://apps.apple.com/app/id6762815924",
+  "image": "https://timestablestar.primituz.com/press/app-icon-1024.png",
+  "inLanguage": "en-GB",
+  "author": { "@type": "Organization", "name": "Primituz" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -38,6 +54,7 @@
   <div class="wrap">
     <a class="brand" href="./"><img src="img/icon-192.webp" alt="" width="192" height="192">Times Table Star</a>
     <ul class="nav">
+      <li class="wide"><a href="#pets">Pets</a></li>
       <li class="wide"><a href="#features">Features</a></li>
       <li class="wide"><a href="#parents">For parents</a></li>
       <li class="wide"><a href="#pricing">Pricing</a></li>
@@ -63,13 +80,19 @@
       </div>
       <p class="small">Free to download. No adverts, no accounts, no tracking.</p>
     </div>
-    <div class="stage-card">
-      <img class="room" src="img/room-candy.webp" alt="" width="900" height="725">
-      <div class="pets">
-        <img class="p1" src="img/pets/stella.webp" alt="Stella the star" width="342" height="360">
-        <img class="p2" src="img/pets/mochi.webp" alt="Mochi the kitten" width="255" height="360">
-        <img class="p3" src="img/pets/ember.webp" alt="Ember the dragon" width="291" height="360">
-      </div>
+    <div class="stage-card video-card">
+      <video id="hero-video" data-loop autoplay muted loop playsinline preload="metadata" poster="videos/pets/stella.jpg" aria-label="Stella the star, one of the eleven pets in Times Table Star">
+        <source src="videos/pets/stella.mp4" type="video/mp4">
+      </video>
+      <script>
+        /* Respect reduced motion and data saver before the hero starts playing: show the poster instead. */
+        (function (v) {
+          var still = (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) ||
+                      (navigator.connection && navigator.connection.saveData);
+          if (still && v) { v.removeAttribute('autoplay'); v.preload = 'none'; v.pause(); }
+        })(document.getElementById('hero-video'));
+      </script>
+      <button type="button" class="motion-toggle on-card" hidden>Pause the videos</button>
     </div>
   </div>
 </section>
@@ -92,23 +115,62 @@
   </div>
 </section>
 
+<section id="pets" class="band">
+  <div class="wrap">
+    <h2>Meet the pets</h2>
+    <p class="lede">Eleven eggs, eleven very different friends. Your child picks their first egg from all eleven.</p>
+    <p><button type="button" class="motion-toggle" hidden>Pause the videos</button></p>
+    <ul class="pet-grid">
+      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/stella.jpg" aria-hidden="true"><source src="videos/pets/stella.mp4" type="video/mp4"></video><h3>Stella</h3><p>the star</p></li>
+      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/mochi.jpg" aria-hidden="true"><source src="videos/pets/mochi.mp4" type="video/mp4"></video><h3>Mochi</h3><p>the kitten</p></li>
+      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/lumi.jpg" aria-hidden="true"><source src="videos/pets/lumi.mp4" type="video/mp4"></video><h3>Lumi</h3><p>the axolotl</p></li>
+      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/suki.jpg" aria-hidden="true"><source src="videos/pets/suki.mp4" type="video/mp4"></video><h3>Suki</h3><p>the Siamese cat</p></li>
+      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/biscuit.jpg" aria-hidden="true"><source src="videos/pets/biscuit.mp4" type="video/mp4"></video><h3>Biscuit</h3><p>the puppy</p></li>
+      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/pip.jpg" aria-hidden="true"><source src="videos/pets/pip.mp4" type="video/mp4"></video><h3>Pip</h3><p>the owl</p></li>
+      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/pickle.jpg" aria-hidden="true"><source src="videos/pets/pickle.mp4" type="video/mp4"></video><h3>Pickle</h3><p>the tortoise</p></li>
+      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/ember.jpg" aria-hidden="true"><source src="videos/pets/ember.mp4" type="video/mp4"></video><h3>Ember</h3><p>the dragon</p></li>
+      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/coco.jpg" aria-hidden="true"><source src="videos/pets/coco.mp4" type="video/mp4"></video><h3>Coco</h3><p>the capybara</p></li>
+      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/clover.jpg" aria-hidden="true"><source src="videos/pets/clover.mp4" type="video/mp4"></video><h3>Clover</h3><p>the rabbit</p></li>
+      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/rusty.jpg" aria-hidden="true"><source src="videos/pets/rusty.mp4" type="video/mp4"></video><h3>Rusty</h3><p>the fox</p></li>
+    </ul>
+    <p class="pets-note">Your child chooses one pet free. The other ten come with the optional Everything purchase, and a new egg arrives each time the newest pet grows up to Whizz.</p>
+  </div>
+</section>
+
+<section id="action">
+  <div class="wrap">
+    <h2>See it in action</h2>
+    <p class="lede">A few moments from the app itself.</p>
+    <p><button type="button" class="motion-toggle" hidden>Pause the videos</button></p>
+    <ul class="demo-grid">
+      <li class="demo">
+        <div class="phone"><video data-loop muted loop playsinline preload="none" poster="videos/features/quiz.jpg" aria-hidden="true"><source src="videos/features/quiz.mp4" type="video/mp4"></video></div>
+        <h3>Answer and celebrate</h3>
+        <p>Rounds of ten questions are the only thing that helps a pet grow, with a celebration to enjoy along the way.</p>
+      </li>
+      <li class="demo">
+        <div class="phone"><video data-loop muted loop playsinline preload="none" poster="videos/features/tricks.jpg" aria-hidden="true"><source src="videos/features/tricks.mp4" type="video/mp4"></video></div>
+        <h3>Tricks it has learned</h3>
+        <p>Sit, Spin, High Five, Roll, Take a Bow and Dance, each learned as the pet gets cleverer and then there to ask for whenever your child likes.</p>
+      </li>
+      <li class="demo">
+        <div class="phone"><video data-loop muted loop playsinline preload="none" poster="videos/features/playground.jpg" aria-hidden="true"><source src="videos/features/playground.mp4" type="video/mp4"></video></div>
+        <h3>The Playground</h3>
+        <p>With Everything, the pets share a Playground where they play together.</p>
+      </li>
+      <li class="demo">
+        <div class="phone"><video data-loop muted loop playsinline preload="none" poster="videos/features/race.jpg" aria-hidden="true"><source src="videos/features/race.mp4" type="video/mp4"></video></div>
+        <h3>Race a Friend</h3>
+        <p>Two iPhones or iPads side by side get the same ten questions at the same moment, with no internet and no accounts.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
 <section id="features" class="band">
   <div class="wrap">
     <h2>What is inside</h2>
     <p class="lede">Everything here is in the app today.</p>
-    <div class="parade" aria-label="The eleven pets">
-      <img src="img/pets/stella.webp" alt="Stella the star" loading="lazy" width="342" height="360">
-      <img src="img/pets/mochi.webp" alt="Mochi the kitten" loading="lazy" width="255" height="360">
-      <img src="img/pets/lumi.webp" alt="Lumi the axolotl" loading="lazy" width="435" height="298">
-      <img src="img/pets/suki.webp" alt="Suki the Siamese cat" loading="lazy" width="250" height="360">
-      <img src="img/pets/biscuit.webp" alt="Biscuit the puppy" loading="lazy" width="208" height="360">
-      <img src="img/pets/pip.webp" alt="Pip the owl" loading="lazy" width="263" height="360">
-      <img src="img/pets/pickle.webp" alt="Pickle the tortoise" loading="lazy" width="370" height="360">
-      <img src="img/pets/ember.webp" alt="Ember the dragon" loading="lazy" width="291" height="360">
-      <img src="img/pets/coco.webp" alt="Coco the capybara" loading="lazy" width="297" height="360">
-      <img src="img/pets/clover.webp" alt="Clover the rabbit" loading="lazy" width="224" height="360">
-      <img src="img/pets/rusty.webp" alt="Rusty the fox" loading="lazy" width="230" height="360">
-    </div>
     <div class="grid three">
       <div class="card feature"><span class="ico" aria-hidden="true">🥚</span><h3>Eleven pets</h3><p>A star, a kitten, an axolotl, a Siamese cat, a puppy, an owl, a tortoise, a dragon, a capybara, a rabbit and a fox. Your child picks their first egg from all eleven.</p></div>
       <div class="card feature"><span class="ico" aria-hidden="true">🏁</span><h3>Race a friend</h3><p>Two iPhones or iPads side by side get the same ten questions at the same moment, and the faster correct answer takes the point. No internet and no accounts: the devices talk directly over an encrypted link, and no names or messages are ever sent between them.</p></div>
@@ -123,7 +185,28 @@
   </div>
 </section>
 
-<section id="parents">
+<section id="films">
+  <div class="wrap">
+    <h2>Short films</h2>
+    <p class="lede">Three short films about Times Table Star. They only play when you press play.</p>
+    <ul class="film-grid">
+      <li class="film">
+        <video controls playsinline preload="none" poster="videos/films/practice.jpg" aria-label="Film: A pet that grows with practice"><source src="videos/films/practice.mp4" type="video/mp4"></video>
+        <h3>A pet that grows with practice</h3>
+      </li>
+      <li class="film">
+        <video controls playsinline preload="none" poster="videos/films/race.jpg" aria-label="Film: Race a friend"><source src="videos/films/race.mp4" type="video/mp4"></video>
+        <h3>Race a friend</h3>
+      </li>
+      <li class="film">
+        <video controls playsinline preload="none" poster="videos/films/pets.jpg" aria-label="Film: Meet the eleven"><source src="videos/films/pets.mp4" type="video/mp4"></video>
+        <h3>Meet the eleven</h3>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="parents" class="band">
   <div class="wrap">
     <h2>For parents</h2>
     <p class="lede">Times Table Star is designed to be something you can hand to a child without a second thought.</p>
@@ -139,7 +222,7 @@
   </div>
 </section>
 
-<section id="pricing" class="band">
+<section id="pricing">
   <div class="wrap">
     <h2>Honest pricing</h2>
     <p class="lede">Free to download, with times tables practice free forever. There is one optional purchase, paid once, and no subscription.</p>
@@ -167,6 +250,27 @@
           <li>The whole toy box</li>
         </ul>
         <p class="small" style="margin-top:12px">The App Store shows the price in your own currency before anything is bought. If your family bought Times Table Star back when it was a paid app, Everything is already yours.</p>
+      </div>
+    </div>
+    <div class="cta">
+      <a class="btn" href="https://apps.apple.com/app/id6762815924">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5 12 15.5 17 10.5"/><path d="M5 20h14"/></svg>
+        Get it on the App Store
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="feedback" class="band">
+  <div class="wrap narrow">
+    <div class="card feedback">
+      <span class="ico" aria-hidden="true">💌</span>
+      <h2>Tell us how it goes</h2>
+      <p class="lede">Times Table Star is still new, so there are no reviews to show you yet. If it is helping at home, a short App Store review is the best way to help other parents find it.</p>
+      <p class="lede">And if something could be better, or is not working, please tell us. We read every message.</p>
+      <div class="cta">
+        <a class="btn" href="https://apps.apple.com/app/id6762815924?action=write-review">Write an App Store review</a>
+        <a class="btn ghost" href="support.html#contact">Email us your feedback</a>
       </div>
     </div>
   </div>
@@ -203,5 +307,53 @@
     </nav>
   </div>
 </footer>
+
+<script>
+/* Looping videos play only while on screen, and never when reduced motion or data saver is set.
+   Without JavaScript, or without IntersectionObserver, the posters simply show. */
+(function () {
+  var vids = [].slice.call(document.querySelectorAll('video[data-loop]'));
+  var toggles = [].slice.call(document.querySelectorAll('.motion-toggle'));
+  if (!vids.length || !('IntersectionObserver' in window)) {
+    vids.forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); });
+    return;
+  }
+  var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+  var saveData = !!(navigator.connection && navigator.connection.saveData);
+  var playing = !(mq && mq.matches) && !saveData;
+
+  function sync(v) {
+    if (playing && v._onScreen && !document.hidden) {
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+    } else if (!v.paused) {
+      v.pause();
+    }
+  }
+  function syncAll() { vids.forEach(sync); }
+  function label() {
+    toggles.forEach(function (b) {
+      b.hidden = false;
+      b.textContent = playing ? 'Pause the videos' : 'Play the videos';
+    });
+  }
+
+  vids.forEach(function (v) { v.removeAttribute('autoplay'); v._onScreen = false; });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { e.target._onScreen = e.isIntersecting; sync(e.target); });
+  }, { rootMargin: '80px 0px', threshold: 0.2 });
+  vids.forEach(function (v) { io.observe(v); });
+
+  toggles.forEach(function (b) {
+    b.addEventListener('click', function () { playing = !playing; label(); syncAll(); });
+  });
+  if (mq) {
+    var onChange = function () { if (mq.matches) { playing = false; label(); syncAll(); } };
+    if (mq.addEventListener) mq.addEventListener('change', onChange); else if (mq.addListener) mq.addListener(onChange);
+  }
+  document.addEventListener('visibilitychange', syncAll);
+  label();
+})();
+</script>
 </body>
 </html>
