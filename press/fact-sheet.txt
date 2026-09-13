@@ -1,0 +1,49 @@
+TIMES TABLE STAR: FACT SHEET
+
+Name:             Times Table Star
+Developer:        Primituz
+Based in:         Singapore
+First released:   22 April 2026
+Current version:  2.1
+Platforms:        iPhone and iPad
+Age rating:       4+
+App Store:        https://apps.apple.com/app/id6762815924
+Website:          https://angweeseng.github.io/timestablestar-support/
+
+PRICE
+Free to download. Times tables practice is free forever.
+One optional, one-time in-app purchase, "Everything", adds the other ten
+pets and the Playground they share, Division and Missing Number, ten more
+rooms with seasonal decorations, and the full toy box. No subscription.
+
+WHAT IT IS
+A maths practice game for children. A child chooses an egg and raises the
+pet inside it, and the only thing that makes the pet grow is answering
+questions: times tables first, then division and missing numbers.
+
+KEY FEATURES
+* Eleven pets: a star, a kitten, an axolotl, a Siamese cat, a puppy, an owl,
+  a tortoise, a dragon, a capybara, a rabbit and a fox
+* Pets grow through stages (Egg, Baby, Kid, Whizz, Genius) and further ranks
+* Six tricks, learned as the pet's IQ rises
+* Race a friend on two devices side by side: no internet, no accounts, and
+  no names or messages sent between devices
+* Five themes with three rooms each, plus seasonal decorations
+* A Daily Challenge, the same for everyone each day
+* A progress panel for parents showing tricky and mastered facts
+* Separate players for brothers and sisters
+
+PRIVACY
+No adverts, no accounts, no tracking, no analytics and no data collection.
+Progress stays on the device and in the family's own iCloud. The optional AI
+chat is off by default, sits behind a parental gate, and uses the parent's
+own AI provider key.
+
+PRESS CONTACT
+For press enquiries, please use the contact details on the Support page:
+https://angweeseng.github.io/timestablestar-support/support.html
+
+IMAGES IN THIS KIT
+app-icon-1024.png            App icon, 1024 x 1024
+pets/*.png                   Pet artwork, transparent PNG
+share-image-1200x630.jpg     Share image
