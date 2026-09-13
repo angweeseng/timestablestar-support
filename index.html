@@ -2,11 +2,13 @@
 <html lang="en-GB">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Times Table Star: maths practice with a pet that grows</title>
 <meta name="description" content="Times Table Star is a maths practice game for iPhone and iPad. Your child raises a pet that only grows when they practise times tables, division and missing numbers. No adverts, no accounts, no tracking.">
 <meta name="apple-itunes-app" content="app-id=6762815924">
-<meta name="theme-color" content="#fff8f0">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fffaf5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121014" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://timestablestar.primituz.com/">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -30,6 +32,8 @@
 
 <link rel="preload" href="fonts/fredokaone-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="site.css">
+<script>document.documentElement.className += ' js';</script>
+<script src="site.js" defer></script>
 
 <script type="application/ld+json">
 {
@@ -47,7 +51,22 @@
 }
 </script>
 </head>
-<body>
+<body ontouchstart="">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-get" viewBox="0 0 24 24"><path d="M12 4v11"/><path d="M7 10.5 12 15.5 17 10.5"/><path d="M5 20h14"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><rect x="5.5" y="4.5" width="4.5" height="15" rx="1.2"/><rect x="14" y="4.5" width="4.5" height="15" rx="1.2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5 10 17 19 7"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M7 16v-5"/><path d="M12 16V6"/><path d="M17 16V9"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5.5h4V20"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17"/><path d="M8 3v4"/><path d="M16 3v4"/></symbol>
+  <symbol id="i-divide" viewBox="0 0 24 24"><path d="M5 12h14"/><circle cx="12" cy="6.5" r="1.4"/><circle cx="12" cy="17.5" r="1.4"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.2c2.9.3 5 2.7 5 5.8"/></symbol>
+  <symbol id="i-letter" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.5 7l8.5 6.5L20.5 7"/></symbol>
+</svg>
+
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="top">
@@ -55,32 +74,31 @@
     <a class="brand" href="./"><img src="img/icon-192.webp" alt="" width="192" height="192">Times Table Star</a>
     <ul class="nav">
       <li class="wide"><a href="#pets">Pets</a></li>
-      <li class="wide"><a href="#features">Features</a></li>
-      <li class="wide"><a href="#parents">For parents</a></li>
+      <li class="wide"><a href="#action">In action</a></li>
+      <li class="wide"><a href="#parents">Parents</a></li>
       <li class="wide"><a href="#pricing">Pricing</a></li>
-      <li><a href="support.html">Support</a></li>
+      <li class="wide"><a href="support.html">Support</a></li>
+      <li class="nav-cta"><a href="https://apps.apple.com/app/id6762815924">Get the app</a></li>
     </ul>
   </div>
 </header>
 
 <main id="main">
 
-<section class="hero">
+<section class="hero-home">
   <div class="wrap">
-    <div>
-      <span class="eyebrow">For iPhone and iPad</span>
-      <h1>Times Table Star</h1>
-      <p class="promise">A pet that only grows when your child practises their times tables.</p>
-      <div class="cta">
-        <a class="btn" href="https://apps.apple.com/app/id6762815924">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5 12 15.5 17 10.5"/><path d="M5 20h14"/></svg>
-          Get it on the App Store
-        </a>
-        <a class="btn ghost" href="#what">How it works</a>
-      </div>
-      <p class="small">Free to download. No adverts, no accounts, no tracking.</p>
+    <span class="eyebrow">For iPhone and iPad</span>
+    <h1>Times Table <span>Star</span></h1>
+    <p class="promise">A pet that only grows when your child practises their times tables.</p>
+    <div class="cta">
+      <a class="btn" href="https://apps.apple.com/app/id6762815924">
+        <svg class="ico" aria-hidden="true"><use href="#i-get"/></svg>
+        Get it on the App Store
+      </a>
+      <a class="btn ghost" href="#action">See it in action</a>
     </div>
-    <div class="stage-card video-card">
+    <p class="small">Free to download. No adverts, no accounts, no tracking.</p>
+    <div class="hero-media">
       <video id="hero-video" data-loop autoplay muted loop playsinline preload="metadata" poster="videos/pets/stella.jpg" aria-label="Stella the star, one of the eleven pets in Times Table Star">
         <source src="videos/pets/stella.mp4" type="video/mp4">
       </video>
@@ -92,16 +110,18 @@
           if (still && v) { v.removeAttribute('autoplay'); v.preload = 'none'; v.pause(); }
         })(document.getElementById('hero-video'));
       </script>
-      <button type="button" class="motion-toggle on-card" hidden>Pause the videos</button>
+      <button type="button" class="motion-toggle on-media" hidden>Pause the videos</button>
     </div>
   </div>
 </section>
 
-<section id="what">
-  <div class="wrap narrow">
+<section id="grow" class="band">
+  <div class="wrap narrow center reveal">
     <h2>Practice that looks after something</h2>
-    <p class="lede">Times Table Star is a maths practice game for children. Your child chooses an egg and raises the pet inside it, and the only thing that makes that pet grow is answering questions: the times tables first, then division and missing numbers.</p>
+    <p class="lede">Your child chooses an egg and raises the pet inside it. The only thing that makes that pet grow is answering questions: the times tables first, then division and missing numbers.</p>
     <p class="lede">Feeding, washing, tickling and tucking in at bedtime keep the pet happy. Practice is what helps it grow up.</p>
+  </div>
+  <div class="wrap narrow reveal">
     <div class="card growth">
       <ol>
         <li><img class="egg" src="img/stages/mochi-0.webp" alt="" width="146" height="186" loading="lazy"><span>Egg</span></li>
@@ -115,43 +135,55 @@
   </div>
 </section>
 
-<section id="pets" class="band">
+<section id="pets" data-gallery aria-labelledby="pets-title">
+  <div class="wrap section-head reveal">
+    <div>
+      <h2 id="pets-title">Meet the pets</h2>
+      <p class="lede">Eleven eggs, eleven very different friends. Your child picks their first egg from all eleven.</p>
+    </div>
+    <div class="controls">
+      <button type="button" class="motion-toggle" hidden>Pause the videos</button>
+      <button type="button" class="arrow prev" aria-label="Previous pets" aria-disabled="true"><svg class="ico" aria-hidden="true"><use href="#i-left"/></svg></button>
+      <button type="button" class="arrow next" aria-label="More pets"><svg class="ico" aria-hidden="true"><use href="#i-right"/></svg></button>
+    </div>
+  </div>
+  <ul class="rail" tabindex="0" aria-label="The eleven pets. Scroll sideways to see them all.">
+    <li class="pet"><video data-loop muted loop playsinline preload="none" poster="videos/pets/stella.jpg" aria-hidden="true"><source src="videos/pets/stella.mp4" type="video/mp4"></video><h3>Stella</h3><p>the star</p></li>
+    <li class="pet"><video data-loop muted loop playsinline preload="none" poster="videos/pets/mochi.jpg" aria-hidden="true"><source src="videos/pets/mochi.mp4" type="video/mp4"></video><h3>Mochi</h3><p>the kitten</p></li>
+    <li class="pet"><video data-loop muted loop playsinline preload="none" poster="videos/pets/lumi.jpg" aria-hidden="true"><source src="videos/pets/lumi.mp4" type="video/mp4"></video><h3>Lumi</h3><p>the axolotl</p></li>
+    <li class="pet"><video data-loop muted loop playsinline preload="none" poster="videos/pets/suki.jpg" aria-hidden="true"><source src="videos/pets/suki.mp4" type="video/mp4"></video><h3>Suki</h3><p>the Siamese cat</p></li>
+    <li class="pet"><video data-loop muted loop playsinline preload="none" poster="videos/pets/biscuit.jpg" aria-hidden="true"><source src="videos/pets/biscuit.mp4" type="video/mp4"></video><h3>Biscuit</h3><p>the puppy</p></li>
+    <li class="pet"><video data-loop muted loop playsinline preload="none" poster="videos/pets/pip.jpg" aria-hidden="true"><source src="videos/pets/pip.mp4" type="video/mp4"></video><h3>Pip</h3><p>the owl</p></li>
+    <li class="pet"><video data-loop muted loop playsinline preload="none" poster="videos/pets/pickle.jpg" aria-hidden="true"><source src="videos/pets/pickle.mp4" type="video/mp4"></video><h3>Pickle</h3><p>the tortoise</p></li>
+    <li class="pet"><video data-loop muted loop playsinline preload="none" poster="videos/pets/ember.jpg" aria-hidden="true"><source src="videos/pets/ember.mp4" type="video/mp4"></video><h3>Ember</h3><p>the dragon</p></li>
+    <li class="pet"><video data-loop muted loop playsinline preload="none" poster="videos/pets/coco.jpg" aria-hidden="true"><source src="videos/pets/coco.mp4" type="video/mp4"></video><h3>Coco</h3><p>the capybara</p></li>
+    <li class="pet"><video data-loop muted loop playsinline preload="none" poster="videos/pets/clover.jpg" aria-hidden="true"><source src="videos/pets/clover.mp4" type="video/mp4"></video><h3>Clover</h3><p>the rabbit</p></li>
+    <li class="pet"><video data-loop muted loop playsinline preload="none" poster="videos/pets/rusty.jpg" aria-hidden="true"><source src="videos/pets/rusty.mp4" type="video/mp4"></video><h3>Rusty</h3><p>the fox</p></li>
+  </ul>
   <div class="wrap">
-    <h2>Meet the pets</h2>
-    <p class="lede">Eleven eggs, eleven very different friends. Your child picks their first egg from all eleven.</p>
-    <p><button type="button" class="motion-toggle" hidden>Pause the videos</button></p>
-    <ul class="pet-grid">
-      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/stella.jpg" aria-hidden="true"><source src="videos/pets/stella.mp4" type="video/mp4"></video><h3>Stella</h3><p>the star</p></li>
-      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/mochi.jpg" aria-hidden="true"><source src="videos/pets/mochi.mp4" type="video/mp4"></video><h3>Mochi</h3><p>the kitten</p></li>
-      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/lumi.jpg" aria-hidden="true"><source src="videos/pets/lumi.mp4" type="video/mp4"></video><h3>Lumi</h3><p>the axolotl</p></li>
-      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/suki.jpg" aria-hidden="true"><source src="videos/pets/suki.mp4" type="video/mp4"></video><h3>Suki</h3><p>the Siamese cat</p></li>
-      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/biscuit.jpg" aria-hidden="true"><source src="videos/pets/biscuit.mp4" type="video/mp4"></video><h3>Biscuit</h3><p>the puppy</p></li>
-      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/pip.jpg" aria-hidden="true"><source src="videos/pets/pip.mp4" type="video/mp4"></video><h3>Pip</h3><p>the owl</p></li>
-      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/pickle.jpg" aria-hidden="true"><source src="videos/pets/pickle.mp4" type="video/mp4"></video><h3>Pickle</h3><p>the tortoise</p></li>
-      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/ember.jpg" aria-hidden="true"><source src="videos/pets/ember.mp4" type="video/mp4"></video><h3>Ember</h3><p>the dragon</p></li>
-      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/coco.jpg" aria-hidden="true"><source src="videos/pets/coco.mp4" type="video/mp4"></video><h3>Coco</h3><p>the capybara</p></li>
-      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/clover.jpg" aria-hidden="true"><source src="videos/pets/clover.mp4" type="video/mp4"></video><h3>Clover</h3><p>the rabbit</p></li>
-      <li class="pet-card"><video data-loop muted loop playsinline preload="none" poster="videos/pets/rusty.jpg" aria-hidden="true"><source src="videos/pets/rusty.mp4" type="video/mp4"></video><h3>Rusty</h3><p>the fox</p></li>
-    </ul>
-    <p class="pets-note">Your child chooses one pet free. The other ten come with the optional Everything purchase, and a new egg arrives each time the newest pet grows up to Whizz.</p>
+    <p class="note small">Your child chooses one pet free. The other ten come with the optional Everything purchase, and a new egg arrives each time the newest pet grows up to Whizz.</p>
   </div>
 </section>
 
-<section id="action">
+<section id="action" class="band">
   <div class="wrap">
-    <h2>See it in action</h2>
-    <p class="lede">A few moments from the app itself.</p>
-    <p><button type="button" class="motion-toggle" hidden>Pause the videos</button></p>
-    <ul class="demo-grid">
+    <div class="section-head reveal">
+      <div>
+        <h2>See it in action</h2>
+        <p class="lede">A few moments recorded from the app itself.</p>
+      </div>
+      <div class="controls"><button type="button" class="motion-toggle" hidden>Pause the videos</button></div>
+    </div>
+    <ul class="demo-grid reveal">
       <li class="demo">
         <div class="phone"><video data-loop muted loop playsinline preload="none" poster="videos/features/quiz.jpg" aria-hidden="true"><source src="videos/features/quiz.mp4" type="video/mp4"></video></div>
         <h3>Answer and celebrate</h3>
-        <p>Rounds of ten questions are the only thing that helps a pet grow, with a celebration to enjoy along the way.</p>
+        <p>Rounds of ten questions are the only thing that helps a pet grow, with a celebration along the way.</p>
       </li>
       <li class="demo">
         <div class="phone"><video data-loop muted loop playsinline preload="none" poster="videos/features/tricks.jpg" aria-hidden="true"><source src="videos/features/tricks.mp4" type="video/mp4"></video></div>
-        <h3>Tricks it has learned</h3>
-        <p>Sit, Spin, High Five, Roll, Take a Bow and Dance, each learned as the pet gets cleverer and then there to ask for whenever your child likes.</p>
+        <h3>Six tricks to learn</h3>
+        <p>Sit, Spin, High Five, Roll, Take a Bow and Dance, each learned as the pet gets cleverer, then there to ask for whenever your child likes.</p>
       </li>
       <li class="demo">
         <div class="phone"><video data-loop muted loop playsinline preload="none" poster="videos/features/playground.jpg" aria-hidden="true"><source src="videos/features/playground.mp4" type="video/mp4"></video></div>
@@ -161,42 +193,42 @@
       <li class="demo">
         <div class="phone"><video data-loop muted loop playsinline preload="none" poster="videos/features/race.jpg" aria-hidden="true"><source src="videos/features/race.mp4" type="video/mp4"></video></div>
         <h3>Race a Friend</h3>
-        <p>Two iPhones or iPads side by side get the same ten questions at the same moment, with no internet and no accounts.</p>
+        <p>Two iPhones or iPads side by side get the same ten questions at the same moment. No internet, no accounts, and no names or messages are ever sent between them.</p>
       </li>
     </ul>
   </div>
 </section>
 
-<section id="features" class="band">
+<section id="more">
   <div class="wrap">
-    <h2>What is inside</h2>
-    <p class="lede">Everything here is in the app today.</p>
-    <div class="grid three">
-      <div class="card feature"><span class="ico" aria-hidden="true">🥚</span><h3>Eleven pets</h3><p>A star, a kitten, an axolotl, a Siamese cat, a puppy, an owl, a tortoise, a dragon, a capybara, a rabbit and a fox. Your child picks their first egg from all eleven.</p></div>
-      <div class="card feature"><span class="ico" aria-hidden="true">🏁</span><h3>Race a friend</h3><p>Two iPhones or iPads side by side get the same ten questions at the same moment, and the faster correct answer takes the point. No internet and no accounts: the devices talk directly over an encrypted link, and no names or messages are ever sent between them.</p></div>
-      <div class="card feature"><span class="ico" aria-hidden="true">🌱</span><h3>Grows through stages</h3><p>Egg, Baby, Kid, Whizz and Genius, and then on through five more ranks. Every step is earned by answering questions.</p></div>
-      <div class="card feature"><span class="ico" aria-hidden="true">🎩</span><h3>Six tricks</h3><p>Sit, Spin, High Five, Roll, Take a Bow and Dance, each learned as the pet gets cleverer. Once learned, a trick is your child's to ask for whenever they like.</p></div>
-      <div class="card feature"><span class="ico" aria-hidden="true">🏠</span><h3>Rooms and themes</h3><p>Five themes, from Candy Pop to Galaxy, each with three rooms for the pet to live in, and decorations for birthdays and every season.</p></div>
-      <div class="card feature"><span class="ico" aria-hidden="true">📅</span><h3>Daily Challenge</h3><p>A fresh set of questions every day, the same for everyone, with bonus stars the first time it is finished.</p></div>
-      <div class="card feature"><span class="ico" aria-hidden="true">➗</span><h3>Division and Missing Number</h3><p>Once the times tables are well under way, two more subjects open up, each with its own levels, so practice grows with your child.</p></div>
-      <div class="card feature"><span class="ico" aria-hidden="true">📊</span><h3>Progress for parents</h3><p>A panel in Settings shows how the maths is going: days played, stars earned, the level reached in each subject, and which facts are still tricky and which have been cracked. It is written for grown ups, not as a grade.</p></div>
-      <div class="card feature"><span class="ico" aria-hidden="true">👧</span><h3>Room for brothers and sisters</h3><p>Each child can have their own player, with their own pets, stars and progress, on the same device.</p></div>
+    <div class="reveal">
+      <h2>Also inside</h2>
+      <p class="lede">Everything here is in the app today.</p>
+    </div>
+    <div class="tiles reveal">
+      <div class="card tile span2"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg><h3>Progress for parents</h3><p>A panel in Settings shows how the maths is going: days played, stars earned, the level reached in each subject, and which facts are still tricky and which have been cracked. It is written for grown ups, not as a grade.</p></div>
+      <div class="card tile"><svg class="ico" aria-hidden="true"><use href="#i-house"/></svg><h3>Rooms and themes</h3><p>Five themes, from Candy Pop to Galaxy, each with three rooms, and decorations for birthdays and every season.</p></div>
+      <div class="card tile"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg><h3>Daily Challenge</h3><p>A fresh set of questions every day, the same for everyone, with bonus stars the first time it is finished.</p></div>
+      <div class="card tile"><svg class="ico" aria-hidden="true"><use href="#i-divide"/></svg><h3>Division and Missing Number</h3><p>Once the times tables are well under way, two more subjects open up, each with its own levels.</p></div>
+      <div class="card tile"><svg class="ico" aria-hidden="true"><use href="#i-people"/></svg><h3>Room for brothers and sisters</h3><p>Each child can have their own player, with their own pets, stars and progress, on the same device.</p></div>
     </div>
   </div>
 </section>
 
-<section id="films">
+<section id="films" class="band">
   <div class="wrap">
-    <h2>Short films</h2>
-    <p class="lede">Three short films about Times Table Star. They only play when you press play.</p>
-    <ul class="film-grid">
+    <div class="center reveal">
+      <h2>Short films</h2>
+      <p class="lede">Three short films about Times Table Star. They only play when you press play.</p>
+    </div>
+    <ul class="film-grid reveal">
       <li class="film">
         <video controls playsinline preload="none" poster="videos/films/practice.jpg" aria-label="Film: A pet that grows with practice"><source src="videos/films/practice.mp4" type="video/mp4"></video>
         <h3>A pet that grows with practice</h3>
       </li>
       <li class="film">
-        <video controls playsinline preload="none" poster="videos/films/race.jpg" aria-label="Film: Race a friend"><source src="videos/films/race.mp4" type="video/mp4"></video>
-        <h3>Race a friend</h3>
+        <video controls playsinline preload="none" poster="videos/films/race.jpg" aria-label="Film: Race a Friend"><source src="videos/films/race.mp4" type="video/mp4"></video>
+        <h3>Race a Friend</h3>
       </li>
       <li class="film">
         <video controls playsinline preload="none" poster="videos/films/pets.jpg" aria-label="Film: Meet the eleven"><source src="videos/films/pets.mp4" type="video/mp4"></video>
@@ -206,28 +238,32 @@
   </div>
 </section>
 
-<section id="parents" class="band">
+<section id="parents">
   <div class="wrap">
-    <h2>For parents</h2>
-    <p class="lede">Times Table Star is designed to be something you can hand to a child without a second thought.</p>
-    <ul class="trust">
-      <li><span class="tick" aria-hidden="true">✓</span><div><strong>No adverts</strong><span>None at all, and no ad networks or advertising identifiers.</span></div></li>
-      <li><span class="tick" aria-hidden="true">✓</span><div><strong>No accounts</strong><span>Nothing to sign up for. A player is simply a name your child types, and a nickname is fine.</span></div></li>
-      <li><span class="tick" aria-hidden="true">✓</span><div><strong>No tracking and no data collection</strong><span>No analytics and no crash reporting services. We run no servers, so there is nowhere for your child's information to go.</span></div></li>
-      <li><span class="tick" aria-hidden="true">✓</span><div><strong>Progress stays with your family</strong><span>Everything is kept on the device and backed up to your own private iCloud, which we cannot read. It follows your child to a new iPhone or iPad on the same Apple Account.</span></div></li>
-      <li><span class="tick" aria-hidden="true">✓</span><div><strong>The AI chat is off unless you turn it on</strong><span>An optional feature lets the pet talk. It is switched off by default, sits behind a parental gate, and uses your own AI provider key, so conversations run on your account. You can read or erase them, or switch the feature off, at any time.</span></div></li>
-      <li><span class="tick" aria-hidden="true">✓</span><div><strong>What is earned is kept</strong><span>Nothing your child earns by practising is ever taken away or put behind a price.</span></div></li>
+    <div class="reveal">
+      <h2>Made to be handed over</h2>
+      <p class="lede">Times Table Star is designed to be something you can give a child without a second thought.</p>
+    </div>
+    <ul class="trust reveal">
+      <li><span class="tick"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>No adverts</strong><span>None at all, and no ad networks or advertising identifiers.</span></div></li>
+      <li><span class="tick"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>No accounts</strong><span>Nothing to sign up for. A player is simply a name your child types, and a nickname is fine.</span></div></li>
+      <li><span class="tick"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>No tracking and no data collection</strong><span>No analytics and no crash reporting services. We run no servers, so your child's information has nowhere to go, unless you switch on the optional AI chat described below.</span></div></li>
+      <li><span class="tick"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>Progress stays with your family</strong><span>Everything is kept on the device and backed up to your own private iCloud, which we cannot read. It follows your child to a new iPhone or iPad on the same Apple Account.</span></div></li>
+      <li><span class="tick"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>The AI chat is off unless you turn it on</strong><span>An optional feature lets the pet talk. It is switched off by default, sits behind a parental gate, and uses your own AI provider key, so conversations run on your account. You can read or erase them, or switch the feature off, at any time.</span></div></li>
+      <li><span class="tick"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><div><strong>What is earned is kept</strong><span>Nothing your child earns by practising is ever taken away or put behind a price.</span></div></li>
     </ul>
-    <p class="small" style="margin-top:18px">This website follows the same rules: no cookies, no analytics and no third party scripts. <a href="privacy.html">Read the full privacy policy</a>.</p>
+    <p class="small" style="margin-top:2rem">This website follows the same rules: no cookies, no analytics and no third party scripts. <a href="privacy.html">Read the full privacy policy</a>.</p>
   </div>
 </section>
 
-<section id="pricing">
+<section id="pricing" class="band">
   <div class="wrap">
-    <h2>Honest pricing</h2>
-    <p class="lede">Free to download, with times tables practice free forever. There is one optional purchase, paid once, and no subscription.</p>
-    <div class="prices">
-      <div class="card price">
+    <div class="center reveal">
+      <h2>Honest pricing</h2>
+      <p class="lede">Free to download, with times tables practice free forever. There is one optional purchase, paid once, and no subscription.</p>
+    </div>
+    <div class="plans reveal">
+      <div class="card plan">
         <h3>Free</h3>
         <p class="tag">Free to download, and free for good</p>
         <ul>
@@ -240,7 +276,7 @@
           <li>The progress panel for parents</li>
         </ul>
       </div>
-      <div class="card price plus">
+      <div class="card plan plus">
         <h3>Everything</h3>
         <p class="tag">One optional in-app purchase, yours for good</p>
         <ul>
@@ -249,36 +285,30 @@
           <li>Ten more rooms, and seasonal decorations</li>
           <li>The whole toy box</li>
         </ul>
-        <p class="small" style="margin-top:12px">The App Store shows the price in your own currency before anything is bought. If your family bought Times Table Star back when it was a paid app, Everything is already yours.</p>
+        <p class="small" style="margin-top:1rem">The App Store shows the price in your own currency before anything is bought. If your family bought Times Table Star back when it was a paid app, Everything is already yours.</p>
       </div>
     </div>
-    <div class="cta">
+    <div class="cta center">
       <a class="btn" href="https://apps.apple.com/app/id6762815924">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5 12 15.5 17 10.5"/><path d="M5 20h14"/></svg>
+        <svg class="ico" aria-hidden="true"><use href="#i-get"/></svg>
         Get it on the App Store
       </a>
     </div>
   </div>
 </section>
 
-<section id="feedback" class="band">
-  <div class="wrap narrow">
+<section id="feedback">
+  <div class="wrap narrow reveal">
     <div class="card feedback">
-      <span class="ico" aria-hidden="true">💌</span>
+      <svg class="ico" aria-hidden="true"><use href="#i-letter"/></svg>
       <h2>Tell us how it goes</h2>
-      <p class="lede">Times Table Star is still new, so there are no reviews to show you yet. If it is helping at home, a short App Store review is the best way to help other parents find it.</p>
+      <p class="lede">If Times Table Star is helping at home, a short App Store review helps other parents find it.</p>
       <p class="lede">And if something could be better, or is not working, please tell us. We read every message.</p>
       <div class="cta">
         <a class="btn" href="https://apps.apple.com/app/id6762815924?action=write-review">Write an App Store review</a>
         <a class="btn ghost" href="support.html#contact">Email us your feedback</a>
       </div>
     </div>
-  </div>
-</section>
-
-<section id="help">
-  <div class="wrap">
-    <h2>Help and information</h2>
     <div class="help">
       <div class="card">
         <h3>Support</h3>
@@ -309,18 +339,82 @@
 </footer>
 
 <script>
-/* Looping videos play only while on screen, and never when reduced motion or data saver is set.
-   Without JavaScript, or without IntersectionObserver, the posters simply show. */
 (function () {
+  var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+  function reduced() { return !!(mq && mq.matches); }
+  var hasIO = 'IntersectionObserver' in window;
+
+  /* Reveal once, as each block arrives. It fails open: only blocks that start below the fold are
+     ever hidden, and both the observer and every scroll event can uncover them, so a sudden jump
+     from a link or a browser that throttles the observer can never leave a section blank. */
+  var pending = [].slice.call(document.querySelectorAll('.reveal')).filter(function (el) {
+    return el.getBoundingClientRect().top > window.innerHeight;
+  });
+  function uncover(el) {
+    var i = pending.indexOf(el);
+    if (i < 0) return;
+    pending.splice(i, 1);
+    el.classList.remove('pending');
+  }
+  function sweep() {
+    var edge = window.innerHeight * 0.94;
+    pending.slice().forEach(function (el) { if (el.getBoundingClientRect().top < edge) uncover(el); });
+    if (!pending.length) window.removeEventListener('scroll', sweep);
+  }
+  if (hasIO && pending.length) {
+    pending.forEach(function (el) { el.classList.add('pending'); });
+    var ro = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { uncover(e.target); ro.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0 });
+    pending.forEach(function (el) { ro.observe(el); });
+    window.addEventListener('scroll', sweep, { passive: true });
+    window.addEventListener('resize', sweep);
+  }
+
+  /* Gallery arrows page through the rail. Native scrolling does the rest, including momentum,
+     and a smooth scroll can be interrupted by the next touch or wheel at any moment. */
+  [].slice.call(document.querySelectorAll('[data-gallery]')).forEach(function (g) {
+    var rail = g.querySelector('.rail'), prev = g.querySelector('.arrow.prev'), next = g.querySelector('.arrow.next');
+    if (!rail || !prev || !next) return;
+    function step() {
+      var card = rail.querySelector('li');
+      var gap = parseFloat(getComputedStyle(rail).columnGap) || 16;
+      return card ? card.getBoundingClientRect().width + gap : rail.clientWidth * 0.8;
+    }
+    /* Page by the cards that fully fit between the rail's side paddings. The arrows use
+       aria-disabled rather than disabled, so a keyboard user's focus stays put at either end. */
+    function page(dir) {
+      if ((dir < 0 ? prev : next).getAttribute('aria-disabled') === 'true') return;
+      var s = step();
+      var cs = getComputedStyle(rail);
+      var gap = parseFloat(cs.columnGap) || 16;
+      var visible = rail.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+      var n = Math.max(1, Math.floor((visible + gap) / s));
+      rail.scrollBy({ left: dir * n * s, behavior: reduced() ? 'auto' : 'smooth' });
+    }
+    /* Straight from the scroll event, which browsers already deliver at most once a frame. */
+    function state() {
+      var max = rail.scrollWidth - rail.clientWidth - 2;
+      prev.setAttribute('aria-disabled', String(rail.scrollLeft <= 2));
+      next.setAttribute('aria-disabled', String(rail.scrollLeft >= max));
+    }
+    prev.addEventListener('click', function () { page(-1); });
+    next.addEventListener('click', function () { page(1); });
+    rail.addEventListener('scroll', state, { passive: true });
+    window.addEventListener('resize', state);
+    state();
+  });
+
+  /* Looping videos play only while on screen, and never when reduced motion or data saver is set.
+     Without JavaScript, or without IntersectionObserver, the posters simply show. */
   var vids = [].slice.call(document.querySelectorAll('video[data-loop]'));
   var toggles = [].slice.call(document.querySelectorAll('.motion-toggle'));
-  if (!vids.length || !('IntersectionObserver' in window)) {
+  if (!vids.length || !hasIO) {
     vids.forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); });
     return;
   }
-  var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
   var saveData = !!(navigator.connection && navigator.connection.saveData);
-  var playing = !(mq && mq.matches) && !saveData;
+  var playing = !reduced() && !saveData;
 
   function sync(v) {
     if (playing && v._onScreen && !document.hidden) {
@@ -332,9 +426,11 @@
   }
   function syncAll() { vids.forEach(sync); }
   function label() {
+    var icon = playing ? '#i-pause' : '#i-play';
+    var text = playing ? 'Pause the videos' : 'Play the videos';
     toggles.forEach(function (b) {
       b.hidden = false;
-      b.textContent = playing ? 'Pause the videos' : 'Play the videos';
+      b.innerHTML = '<svg class="ico" aria-hidden="true"><use href="' + icon + '"/></svg><span>' + text + '</span>';
     });
   }
 
